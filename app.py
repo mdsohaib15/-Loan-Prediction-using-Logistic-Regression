@@ -16,6 +16,9 @@ This app predicts whether a customer is **eligible for a home loan** based on th
 with st.form("loan_form"):
     col1, col2 = st.columns(2)
 
+    # Optional Loan ID input (not used in prediction)
+    Loan_ID = st.text_input("Loan ID (Optional)", placeholder="E.g., LP001015")
+
     Gender = col1.selectbox("Gender", ["Male", "Female"])
     Married = col2.selectbox("Married", ["No", "Yes"])
     Dependents = col1.selectbox("Dependents", ["0", "1", "2", "3+"])
@@ -30,7 +33,7 @@ with st.form("loan_form"):
 
     submitted = st.form_submit_button("Check Eligibility")
 
-# Mapping to numeric format
+# Prediction logic
 if submitted:
     gender = 1 if Gender == "Male" else 0
     married = 1 if Married == "Yes" else 0
@@ -47,6 +50,6 @@ if submitted:
     prediction = model.predict(input_data)[0]
 
     if prediction == 1:
-        st.success("✅ The applicant is eligible for the loan.")
+        st.success(f"✅ Loan ID `{Loan_ID or 'N/A'}` is eligible for the loan.")
     else:
-        st.error("❌ The applicant is not eligible for the loan.")
+        st.error(f"❌ Loan ID `{Loan_ID or 'N/A'}` is not eligible for the loan.")

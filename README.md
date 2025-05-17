@@ -10,7 +10,7 @@ This project automates the loan eligibility checking process for **Dream Housing
 
 ---
 
-## 📌 Project Description
+##  Project Description
 
 Dream Housing Finance is looking to digitize and automate the loan eligibility process using machine learning. This Streamlit-based application classifies whether a customer is eligible (`1`) or not (`0`) for a loan based on their:
 
@@ -21,9 +21,9 @@ Dream Housing Finance is looking to digitize and automate the loan eligibility p
 
 ---
 
-## 🧠 Machine Learning Model
+##  Machine Learning Model
 
-The model is trained using a classification algorithm such as **Logistic Regression**, **Random Forest**, or **XGBoost**, trained on a cleaned dataset with features:
+The model is trained using a classification algorithm trained on a cleaned dataset with features:
 
 - Gender
 - Married
@@ -41,19 +41,28 @@ The target variable is `Loan_Status` (0 = Not Eligible, 1 = Eligible).
 
 ---
 
+## Model Accuracies:
+
+
+**Train Accuracy 0.8057**
+
+**Test Accuracy 0.8**
+
+---
+
 ## 📂 Project Structure
 
 ```bash
 .
 ├── streamlit_app.py          # Main Streamlit app
-├── loan_classifier.pkl       # Trained ML model
+├── loan_predict_model.pkl       # Trained ML model
 ├── requirements.txt          # Dependencies
 └── README.md                 # Project documentation
 ````
 
 ---
 
-## ⚙️ How to Run the App
+##  How to Run the App
 
 ### Step 1: Clone the Repository
 
@@ -97,11 +106,11 @@ The app returns a clear result:
 
 ---
 
-## 📊 Technologies Used
+##  Technologies Used
 
-* Python 🐍
-* Streamlit 📺
-* scikit-learn 🤖
+* Python 
+* Streamlit 
+* scikit-learn 
 * pandas, numpy
 * joblib
 
