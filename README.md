@@ -6,7 +6,7 @@ This project automates the loan eligibility checking process for **Dream Housing
 
 ## 🚀 Demo
 
-![App Screenshot](demo.png)
+[Demo Link](http://192.168.0.108:8501)
 
 ---
 
